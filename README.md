@@ -1,14 +1,15 @@
-# API-Restful-Python #
+# API-RESTful-Python #
 
-## Introduction ##
+## Introducción ##
 
 Este es un ejemplo basico para la creción de un API Restful usando Python con 
-el framework [Flask][1] y [Flask-RESTful][2], se utiliza dos EndPoint HTTP (GET y POST).
+el framework [Flask][1] y [Flask-RESTful][2], se utiliza dos EndPoint HTTP (GET y POST), 
+ademas se incorpora un metodo de authentication Basic para poder hacer las peticiones al API.
 
 Este docuemento contiene instrucciones breves sobre la instalación de requerimientos,
 instalación de los framework [Flask][1] y [Flask-RESTful][2]
 
-For more information, see the
+Para más información, consulte:
 
   * [Flask][1],
   * [Flask-RESTful][2],
@@ -16,7 +17,9 @@ For more information, see the
 [1]: http://flask.pocoo.org
 [2]: http://flask-restful-cn.readthedocs.org/en/0.3.4/
 
-## Installing ##
+La API fue desarrollada en un sistema operativo Mac OS Yosemite 10.10.5
+
+## Instalación ##
 
     sudo easy_install pip
     sudo pip install virtualenv
@@ -62,6 +65,20 @@ abrimos el archivo apprestful.py y cambiamos esta linea:
 por esta otra:
       
       app.run(port = 9001, debug=True)
+
+
+### Usando la API
+
+Ejemplo de uso de llamadas al API usando `curl` para las peticiones:
+
+#### Regresa un JSON con todos los usuarios registrados (dispositivos iOS y/o Android en nuestro caso )
+
+  $ curl -X GET -u "<user>:<pwd>" http://<server_ip>:5000/users
+
+#### Agrega un nuevo usuario (dispositivo iOS y/o Android en nuestro caso )
+
+  $ curl -u "<user>:<pwd>" http://<server_ip>:5000/users -H "Content-Type: application/json" --data '{"idUser":"4","UDID":"hjsgjkdhgah","NmbrDisp":"aMEJIA","Device":"iOS"}' -X POST -v
+
 
 
 ## Contact ##
