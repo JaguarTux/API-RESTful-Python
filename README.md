@@ -71,14 +71,13 @@ por esta otra:
 
 Ejemplo de uso de llamadas al API usando `curl` para las peticiones:
 
-#### Regresa un JSON con todos los usuarios registrados (dispositivos iOS y/o Android en nuestro caso )
+##### Regresa un JSON con todos los usuarios registrados (dispositivos iOS y/o Android en nuestro caso )
 
-  $ curl -X GET -u "<user>:<pwd>" http://<server_ip>:5000/users
+      $ curl -X GET -u <user_api>:<pwd_api> http://<server_ip>:5000/users
 
-#### Agrega un nuevo usuario (dispositivo iOS y/o Android en nuestro caso )
+##### Agrega un nuevo usuario (dispositivo iOS y/o Android en nuestro caso )
 
-  $ curl -u "<user>:<pwd>" http://<server_ip>:5000/users -H "Content-Type: application/json" --data '{"idUser":"4","UDID":"hjsgjkdhgah","NmbrDisp":"aMEJIA","Device":"iOS"}' -X POST -v
-
+      $ curl -u <user_api>:<pwd_api> http://<server_ip>:5000/users -H "Content-Type: application/json" --data '{"idUser":"4","UDID":"hjsgjkdhgah","NmbrDisp":"aMEJIA","Device":"iOS"}' -X POST -v
 
 
 ## Contact ##
