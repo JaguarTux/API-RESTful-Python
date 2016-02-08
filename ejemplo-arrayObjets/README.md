@@ -5,25 +5,21 @@
 Este es un ejemplo basico para la creción de un API RESTful usando Python con 
 el framework [Flask][1] y la extensión [Flask-RESTful][2], se utiliza dos EndPoint HTTP (GET y POST), 
 ademas se incorpora un metodo de authentication Basic para poder hacer las peticiones al API.
-Se utiliza [MongoDB][3] para almacenar la informacion de los usuarios-dispositivos.
+Se utiliza un Array de objetos para almacenar la informacion de los usuarios-dispositivos.
 
 Este docuemento contiene instrucciones breves sobre la instalación de requerimientos:
 instalación:
       del framework [Flask][1]
       de la extension [Flask-RESTful][2]
-      de la base de datos [MongoDB][3]
+
 
 Para más información, consulte:
 
   * [Flask][1],
-  * [Flask-RESTful][2]
-
-Para la implementacion de este proyecto es necesario tener instalado [MongoDB][4].
+  * [Flask-RESTful][2],
 
 [1]: http://flask.pocoo.org
 [2]: http://flask-restful-cn.readthedocs.org/en/0.3.4/
-[3]: https://www.mongodb.org/
-[4]: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/
 
 La API fue desarrollada en un sistema operativo Mac OS Yosemite 10.10.5
 
@@ -36,17 +32,16 @@ La API fue desarrollada en un sistema operativo Mac OS Yosemite 10.10.5
 
 Primer paso, se debe acceder a nuestro proyecto 
 
-    cd API-RESTful-Python
+    cd API-RESTful-Python/ejemplo-arrayObjets
 
 A continuacion ejecutamos virtualenv:
     
     virtualenv flask
 
-procedemos a instalar el framework y extensiones necesarias para nuestro proyecto
+procedemos a instalar Flask y Flask-RESTful en nuestro proyecto
 
     flask/bin/pip install flask
     flask/bin/pip install flask-restful
-    flask/bin/pip install pymongo
 
 asignamos permiso de ejecucion a nuestro archivo apprestful.py:
     
